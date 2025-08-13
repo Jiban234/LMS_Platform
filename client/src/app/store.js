@@ -5,5 +5,5 @@ import { authApi } from "@/features/api/authApi.js";
 
 export const appStore = configureStore({
   reducer : rootReducer,
-  middleware : (defaultMiddleware)=> defaultMiddleware().concat(authApi.middleware)
+  middleware : (defaultMiddleware) => defaultMiddleware().concat(authApi.middleware)
 });

@@ -85,7 +85,7 @@ const handleRegistration = async (type) => {
   const action = type === "signup" ? registerUser : loginUser;
 
   try {
-    console.log("Sending:", inputData);
+    // console.log("Sending:", inputData);
     const data = await action(inputData).unwrap();
     toast.success(data?.message || (type === "signup" ? "Registration successful!" : "Login successful!"));
   } catch (error) {
@@ -96,7 +96,7 @@ const handleRegistration = async (type) => {
 
 
   return (
-    <div className="flex w-full items-center justify-center">
+    <div className="flex w-full items-center justify-center mt-16">
       <Tabs defaultValue="account">
         <TabsList>
           <TabsTrigger value="signup">Sign Up</TabsTrigger>
